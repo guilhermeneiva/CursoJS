@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brasileiro ou Estrangeiro?</title>
+</head>
+
+<body>
+  <h1>Veirficando naturalidade</h1>
+  Vivendo em qual país? <input type="text" name="txtpais" id="txtpais">
+  <input type="button" value="Verificar" onclick="verificar()">
+  <div id="resultado"></div>
+</body>
+<script>
+  function verificar() {
+    var tpais = document.getElementById('txtpais')
+    var resultado = document.getElementById('resultado')
+    var pais = String(tpais.value)
+    resultado.innerHTML = `<p>Vivendo em ${pais}</p>`
+    if (pais == 'Brasil') {
+      resultado.innerHTML += `Brasileiro`
+    } else {
+      resultado.innerHTML += `Estrangeiro`
+    }
+
+  }
+</script>
+
+</html>
